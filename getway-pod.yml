@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+	name: getway-pod
+	labels: 
+		app: getway
+		type: microservice
+spec:
+	containers:
+	- name: getway-app
+	  image: rrmora02/serviciosapigateway:latest
+	  ports: 
+		- containerPorts: 80
