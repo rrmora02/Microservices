@@ -20,7 +20,7 @@ spec:
         spec:
           containers:
             - name: mongo
-              image: mongo:4.2.12
+              image: mongo:5.0.22
               command:
               - /bin/bash
               - -c
@@ -28,6 +28,6 @@ spec:
               - name: MONGO_INITDB_ROOT_USERNAME
                 value: "rrmora02"
               - name: MONGO_INITDB_ROOT_PASSWORD
-                value: "$rrmora022023"
+                value: "$rrmora022023$"
               ports:
                 - containerPort: 27017
