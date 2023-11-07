@@ -1,16 +1,16 @@
 apiVersion: v1
 kind: Service
 metadata:
-	name: getway-service
-	labels:
-		name: getway-service
-		app: microservice
+  name: gateway-service
+  labels:
+    name: gateway-service
+    app: microservice
 spec:
-	type: LoadBalancer
-	ports: 
-		- port: 80
-		  targetPort: 80
-		  nodePort: 30010
-	selector:
-		app: getway
-		type: microservice
+  type: LoadBalancer
+  ports:
+    - port: 80
+      targetPort: 80
+      nodePort: 30010
+  selector:
+     app: gateway
+     type: microservice

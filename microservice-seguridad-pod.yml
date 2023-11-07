@@ -1,16 +1,16 @@
 apiVersion: v1
 kind: Pod
 metadata:
-	name: microservice-seguridad-pod
-	labels: 
-		app: microservice-seguridad
-		type: microservice
+  name: microservice-seguridad-pod
+  labels:
+    app: microservice-seguridad
+    type: microservice
 spec:
-	containers:
-		- name: microservice-seguridad-app
-		  image: rrmora02/serviciosapiseguridad:latest
-		  ports: 
-			- containerPorts: 80
-		  env:
-			- name: ConnectionStrings__ConexionDB
-			  value: Server=mssql-service;DataBase=Seguridad;User=sa;Password=$rrmora022023
+  containers:
+    - name: microservice-seguridad-app
+      image: rrmora02/serviciosapiseguridad:latest
+      ports:
+        - containerPort: 80
+      env:
+        - name: ConnectionStrings__ConexionDB
+          value: Server=mssql-service;Database=Seguridad;User=sa;Password=$rrmora022023

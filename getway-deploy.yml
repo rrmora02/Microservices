@@ -1,25 +1,25 @@
 apiVersion: apps/v1
 kind: Deployment
-metadata: 
-	name: getway-deploy
-	labels: 
-		name: getway-deploy
-		app: microservice
+metadata:
+  name: gateway-deploy
+  labels:
+    name: gateway-deploy
+    app: microservice
 spec:
-	replicas: 1
-	selector: 
-		matchLabels:
-			app: getway
-			type: microservice
-	template:
-		metadata:
-			name: getway-pod
-			labels: 
-				app: getway
-				type: microservice
-		spec:
-			containers:
-				- name: getway-app
-				  image: rrmora02/serviciosapigateway:latest
-				  ports: 
-					- containerPorts: 80
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gateway
+      type: microservice
+  template:
+    metadata:
+      name: gateway-pod
+      labels:
+        app: gateway
+        type: microservice
+    spec:
+     containers:
+      - name: gateway-app
+        image: rrmora02/serviciosapigateway:latest
+        ports:
+          - containerPort: 80
